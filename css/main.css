@@ -12,6 +12,7 @@ body {
   background-color: #ff369b;
   width: 100%;
   height: 6em;
+  font-family: 'Coming Soon', cursive;
 }
 .navigation {
   float: left;
@@ -52,7 +53,7 @@ body {
   margin: 0;
   padding: 0;
 }
-#primary_nav_wrap ul li.current-menu-item {
+#primary_nav_wrap ul li {
   background: lightgreen;
 }
 #primary_nav_wrap ul li:hover {
