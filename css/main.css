@@ -1,0 +1,59 @@
+body {
+  background-color: #cd689b;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: fantasy;
+  margin: 0;
+  background-image: url("http://3.bp.blogspot.com/-jpZxQBJ7Of8/T-3VG325TKI/AAAAAAAAAEU/Tol7OdK2KYw/s1600/Zebra_Print_Vector_by_inferlogic.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.header {
+  background-color: #ff369b;
+  width: 100%;
+  height: 6em;
+}
+.navigation {
+  float: left;
+  background-color: lightgreen;
+  width: 24%;
+  font-family: 'Coming Soon', cursive;
+  text-align: center;
+  height: 2em;
+  border-style: groove;
+  border-width: 3px;
+}
+.navigation span {
+  /* display: block; lets us use position: absolute; to horizontally and vertically center our span inside of a div, div must also be position: absolute; or position: relative; for this to work */
+}
+.main-content {
+  background-image: url("../Images/Zebra-stripes.jpg");
+  background-color: white;
+  color: black;
+}
+.carousel {
+  position: relative;
+  list-style: none;
+}
+.carousel > li {
+  position: absolute;
+}
+.carousel > li:not(.active) {
+  display: none;
+}
+.footer {
+  background-color: #ff369b;
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3em;
+}
+@media screen and (max-width: 540px) {
+  .navigation {
+    width: 50%;
+  }
+}

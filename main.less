@@ -1,0 +1,107 @@
+// out: css/main.css, sourcemap: true
+
+// COLOR VARIABLES
+@logo-pink: darken(hotpink, 10%);
+@logo-mute: desaturate(@logo-pink, 50%);
+@logo-pink-light: lighten(@logo-pink, 70%);
+
+// TYPE VARIABLES
+@regular: 1em;
+@large: @regular * 1.75;
+@x-large: @large * 2;
+@xx-large: @large * 3;
+@fancy-font: 'Coming Soon', cursive;
+@normal-font: 'Josefin Sans', sans-serif;
+
+
+body {
+  background-color: @logo-mute;
+  color: @logo-pink-light;
+  font-size: @regular;
+  font-family: fantasy;
+  margin: 0;
+  background-image: url("http://3.bp.blogspot.com/-jpZxQBJ7Of8/T-3VG325TKI/AAAAAAAAAEU/Tol7OdK2KYw/s1600/Zebra_Print_Vector_by_inferlogic.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+
+.header {
+  background-color: @logo-pink;
+  width: 100%;
+  height: 6em;
+}
+
+.navigation {
+  float:left;
+  background-color: lightgreen;
+  width: 25%-1px;
+  font-family: @fancy-font;
+  text-align: center;
+  height: 2em;
+  border-style: groove;
+  border-width: 3px;
+
+
+  span {
+    /* display: block; lets us use position: absolute; to horizontally and vertically center our span inside of a div, div must also be position: absolute; or position: relative; for this to work */
+    // display: block;
+    // width: 100%;
+    // position: absolute;
+    // top: 50%;
+    // margin-top: -.5em;
+    // left: 0;
+  }
+}
+
+.main-content {
+  background-image: url("../Images/Zebra-stripes.jpg");
+  // background-repeat: no-repeat;
+  background-color: white;
+  color: black;
+}
+
+
+
+///// CAROUSEL ATTEMPT 2 /////
+///// http://agelber.com/blog/looping-carousel/ //////
+.carousel {
+  position: relative;
+  list-style: none;
+}
+
+.carousel > li {
+  position: absolute;
+}
+
+.carousel > li:not(.active) {
+  display:none;
+}
+
+
+
+
+
+.footer {
+  background-color: @logo-pink;
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 3em;
+}
+
+
+
+
+///////////RESPONSIVE DESIGN WORK //////////////
+@media screen and (max-width: 540px) {
+  .navigation {
+    width: 50%;
+  }
+}
