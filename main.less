@@ -15,6 +15,7 @@
 @fancy-font: 'Coming Soon', cursive;
 @normal-font: 'Josefin Sans', sans-serif;
 
+// To make zebra stretch the whole way, had to make html and body stretch the entire browser screen
 html,
 body {
   width: 100%;
@@ -39,9 +40,16 @@ body {
 .header {
   background-color: @logo-pink;
   width: 100%;
-  height: 6em;
+  // height: 6em;
   font-family: @fancy-font;
-  // font-size: 5em;
+  font-size: 4em;
+
+  p {
+    margin: 0;
+  }
+
+  // top: 0;
+  // margin: -2em, auto;
 }
 
 // .navigation {
@@ -66,6 +74,11 @@ body {
 //   // }
 // }
 
+.drop-down {
+  position: relative;
+  z-index: 1;
+}
+
 #primary_nav_wrap {
 	margin-top:0px
 }
@@ -83,10 +96,10 @@ body {
 	color:#333;
 	text-decoration:none;
 	font-weight:700;
-	font-size:12px;
+	font-size:18px;
 	line-height:32px;
 	padding:0 15px;
-	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+	font-family: @fancy-font;
 }
 
 #primary_nav_wrap ul li {
@@ -144,6 +157,8 @@ body {
 
 ///// CAROUSEL ATTEMPT 2 /////
 ///// http://agelber.com/blog/looping-carousel/ //////
+
+// Put the entire carousel into a container so that able to position the entire thing and elements within the thing
 .carousel-container {
   display: table;
   margin: 0 auto;
@@ -154,6 +169,7 @@ body {
   .carousel-nav {
     width: 10em;
     font-family: @fancy-font;
+    font-size: 1em;
     position: absolute;
     top: 50%;
     z-index: 0;
@@ -173,6 +189,10 @@ body {
   z-index: 0;
   list-style: none;
   font-family: @fancy-font;
+  text-align: center;
+  font-size: 3em;
+  color: @logo-pink;
+
   padding: 0;
   // padding: 10px, white;
   // border: solid, 20px;

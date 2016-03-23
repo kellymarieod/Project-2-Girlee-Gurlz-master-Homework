@@ -14,13 +14,11 @@
 <body>
 
   <div class="header">
-    <a href="http://girleegurlz.com/index.php">GiRLEEgurlz
+    <p>GiRLEEgurlz</p>
     <!-- <img src="Images/GIRLEEgurlz-logo2.jpg"/> -->
-  </a>
-
   </div>
 
-  <div>
+  <div class="drop-down">
     <nav id="primary_nav_wrap">
       <ul>
         <li><a href="http://girleegurlz.com/makeover_packages.php?packages=Party"><span>Parties</span></a>
@@ -101,13 +99,24 @@
   <ul class="carousel">
     <li>
       <img src="Images/Makeover-1.jpg" />
+      <!-- moved the caption to a new line and made it its own div with its own class -->
       <div class="caption">Makeovers</div>
     </li>
-    <li>Parties<img src="Images/Makeover-2.JPG" /></li>
-    <li>Shopping<img src="Images/Shop-1.JPG" /></li>
-    <li>Summer Camp<img src="Images/SummerCamp-1.jpg" /></li>
+    <li>
+      <img src="Images/Makeover-2.JPG" />
+      <div class="caption">Parties</div>
+    </li>
+    <li>
+      <img src="Images/Shop-1.JPG" />
+      <div class="caption">Shopping</div>
+    </li>
+    <li>
+      <img src="Images/SummerCamp-1.jpg" />
+      <div class="caption">Summer Camp</div>
+    </li>
   </ul>
 
+  <!-- Made these buttons because "a href" is for going to other pages, button is for action on the page -->
   <button class="carousel-nav prev">< Previous</button>
   <button class="carousel-nav next">Next ></button>
 
