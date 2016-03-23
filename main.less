@@ -15,16 +15,22 @@
 @fancy-font: 'Coming Soon', cursive;
 @normal-font: 'Josefin Sans', sans-serif;
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
-  background-color: @logo-mute;
+  // background-color: @logo-mute;
   color: @logo-pink-light;
   font-size: @regular;
-  font-family: fantasy;
+  font-family: @fancy-font;
   margin: 0;
-  background-image: url("http://3.bp.blogspot.com/-jpZxQBJ7Of8/T-3VG325TKI/AAAAAAAAAEU/Tol7OdK2KYw/s1600/Zebra_Print_Vector_by_inferlogic.jpg");
+  background-image: url("../Images/Zebra-stripes.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
 }
 
 
@@ -35,37 +41,36 @@ body {
   width: 100%;
   height: 6em;
   font-family: @fancy-font;
+  // font-size: 5em;
 }
 
-.navigation {
-  float:left;
-  background-color: lightgreen;
-  width: 25%-1px;
-  font-family: @fancy-font;
-  text-align: center;
-  height: 2em;
-  border-style: groove;
-  border-width: 3px;
+// .navigation {
+//   // float:left;
+//   // background-color: lightgreen;
+//   // width: 25%-1px;
+//   // font-family: @fancy-font;
+//   // text-align: center;
+//   // height: 2em;
+//   // border-style: groove;
+//   // border-width: 3px;
+//
+//
+//   // span {
+//   //   /* display: block; lets us use position: absolute; to horizontally and vertically center our span inside of a div, div must also be position: absolute; or position: relative; for this to work */
+//   //   // display: block;
+//   //   // width: 100%;
+//   //   // position: absolute;
+//   //   // top: 50%;
+//   //   // margin-top: -.5em;
+//   //   // left: 0;
+//   // }
+// }
 
-
-  span {
-    /* display: block; lets us use position: absolute; to horizontally and vertically center our span inside of a div, div must also be position: absolute; or position: relative; for this to work */
-    // display: block;
-    // width: 100%;
-    // position: absolute;
-    // top: 50%;
-    // margin-top: -.5em;
-    // left: 0;
-  }
+#primary_nav_wrap {
+	margin-top:0px
 }
 
-#primary_nav_wrap
-{
-	margin-top:15px
-}
-
-#primary_nav_wrap ul
-{
+#primary_nav_wrap ul {
 	list-style:none;
 	position:relative;
 	float:left;
@@ -73,8 +78,7 @@ body {
 	padding:0
 }
 
-#primary_nav_wrap ul a
-{
+#primary_nav_wrap ul a {
 	display:block;
 	color:#333;
 	text-decoration:none;
@@ -85,26 +89,22 @@ body {
 	font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
-#primary_nav_wrap ul li
-{
+#primary_nav_wrap ul li {
 	position:relative;
 	float:left;
 	margin:0;
 	padding:0
 }
 
-#primary_nav_wrap ul li
-{
+#primary_nav_wrap ul li {
 	background:@nav-green;
 }
 
-#primary_nav_wrap ul li:hover
-{
+#primary_nav_wrap ul li:hover {
 	background:@hover-green;
 }
 
-#primary_nav_wrap ul ul
-{
+#primary_nav_wrap ul ul {
 	display:none;
 	position:absolute;
 	top:100%;
@@ -113,56 +113,92 @@ body {
 	padding:0
 }
 
-#primary_nav_wrap ul ul li
-{
+#primary_nav_wrap ul ul li {
 	float:none;
 	width:200px
 }
 
-#primary_nav_wrap ul ul a
-{
+#primary_nav_wrap ul ul a {
 	line-height:120%;
 	padding:10px 15px
 }
 
-#primary_nav_wrap ul ul ul
-{
+#primary_nav_wrap ul ul ul {
 	top:0;
 	left:100%
 }
 
-#primary_nav_wrap ul li:hover > ul
-{
+#primary_nav_wrap ul li:hover > ul {
 	display:block
 }
 
-.main-content {
-  background-image: url("../Images/Zebra-stripes.jpg");
-  // background-repeat: no-repeat;
-  background-color: white;
-  color: black;
-}
+// .main-content {
+//   background-image: url("../Images/Zebra-stripes.jpg");
+//   // background-repeat: no-repeat;
+//   background-color: white;
+//   color: black;
+//   font-style: @fancy-font;
+// }
 
 
 
 ///// CAROUSEL ATTEMPT 2 /////
 ///// http://agelber.com/blog/looping-carousel/ //////
+.carousel-container {
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  z-index: 0;
+
+  .carousel-nav {
+    width: 10em;
+    font-family: @fancy-font;
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+
+    &.prev {
+      left: -11em;
+    }
+
+    &.next {
+      right: -11em;
+    }
+  }
+}
+
 .carousel {
   position: relative;
+  z-index: 0;
   list-style: none;
+  font-family: @fancy-font;
+  padding: 0;
+  // padding: 10px, white;
+  // border: solid, 20px;
+
+  > li {
+    display: none;
+
+    &.active {
+      display: list-item;
+    }
+
+    &.next-out, &.prev-out {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    img {
+      width: 500px;
+      border-width: medium;
+      border-color: white;
+      border-style: solid;
+    }
+  }
 }
-
-.carousel > li {
-  position: absolute;
-}
-
-.carousel > li:not(.active) {
-  display:none;
-}
-
-
-
-
 
 .footer {
   background-color: @logo-pink;

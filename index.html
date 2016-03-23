@@ -51,7 +51,7 @@
 
 
 
-  <div class="main-content"> Main Content </div>
+  <!-- <div class="main-content"> Main Content </div> -->
 
 <!-- ////// ATTEMPTING TO MAKE A CAROUSEL 1-->
 <!-- http://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
@@ -97,19 +97,19 @@
 
 <!-- ///// ATTEMPTING TO MAKE A CAROUSEL 2 ///// -->
 <!-- ///// http://agelber.com/blog/looping-carousel/ ////// -->
-<div>
+<div class="carousel-container">
   <ul class="carousel">
-    <li>Item Number 1<img src="Images/Makeover-1.jpg" /></li>
-    <li>Item Number 2<img src="Images/Makeover-2.JPG" /></li>
-    <li>Item Number 3<img src="Images/Shop-1.JPG" /></li>
-    <li>Item Number 4<img src="Images/SummerCamp-1.jpg" /></li>
+    <li>
+      <img src="Images/Makeover-1.jpg" />
+      <div class="caption">Makeovers</div>
+    </li>
+    <li>Parties<img src="Images/Makeover-2.JPG" /></li>
+    <li>Shopping<img src="Images/Shop-1.JPG" /></li>
+    <li>Summer Camp<img src="Images/SummerCamp-1.jpg" /></li>
   </ul>
 
-  <a href="#" class="carousel-nav prev"><</a>
-  <a href="#" class="carousel-nav next">></a>
-
-
-
+  <button class="carousel-nav prev">< Previous</button>
+  <button class="carousel-nav next">Next ></button>
 
 </div>
 

@@ -1,12 +1,17 @@
+html,
 body {
-  background-color: #cd689b;
+  width: 100%;
+  height: 100%;
+}
+body {
   color: #ffffff;
   font-size: 1em;
-  font-family: fantasy;
+  font-family: 'Coming Soon', cursive;
   margin: 0;
-  background-image: url("http://3.bp.blogspot.com/-jpZxQBJ7Of8/T-3VG325TKI/AAAAAAAAAEU/Tol7OdK2KYw/s1600/Zebra_Print_Vector_by_inferlogic.jpg");
+  background-image: url("../Images/Zebra-stripes.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
 }
 .header {
   background-color: #ff369b;
@@ -14,21 +19,8 @@ body {
   height: 6em;
   font-family: 'Coming Soon', cursive;
 }
-.navigation {
-  float: left;
-  background-color: lightgreen;
-  width: 24%;
-  font-family: 'Coming Soon', cursive;
-  text-align: center;
-  height: 2em;
-  border-style: groove;
-  border-width: 3px;
-}
-.navigation span {
-  /* display: block; lets us use position: absolute; to horizontally and vertically center our span inside of a div, div must also be position: absolute; or position: relative; for this to work */
-}
 #primary_nav_wrap {
-  margin-top: 15px;
+  margin-top: 0px;
 }
 #primary_nav_wrap ul {
   list-style: none;
@@ -82,20 +74,51 @@ body {
 #primary_nav_wrap ul li:hover > ul {
   display: block;
 }
-.main-content {
-  background-image: url("../Images/Zebra-stripes.jpg");
-  background-color: white;
-  color: black;
+.carousel-container {
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  z-index: 0;
+}
+.carousel-container .carousel-nav {
+  width: 10em;
+  font-family: 'Coming Soon', cursive;
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+}
+.carousel-container .carousel-nav.prev {
+  left: -11em;
+}
+.carousel-container .carousel-nav.next {
+  right: -11em;
 }
 .carousel {
   position: relative;
+  z-index: 0;
   list-style: none;
+  font-family: 'Coming Soon', cursive;
+  padding: 0;
 }
 .carousel > li {
-  position: absolute;
-}
-.carousel > li:not(.active) {
   display: none;
+}
+.carousel > li.active {
+  display: list-item;
+}
+.carousel > li.next-out,
+.carousel > li.prev-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.carousel > li img {
+  width: 500px;
+  border-width: medium;
+  border-color: white;
+  border-style: solid;
 }
 .footer {
   background-color: #ff369b;
